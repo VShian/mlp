@@ -48,8 +48,14 @@ elif args.block_type == 'empty_block':
     processing_block_type = EmptyBlock
     dim_reduction_block_type = EmptyBlock
 elif args.block_type == 'conv_bn_block':
+    # conv_bn_block is a block that contains a convolutional layer followed by a batch normalization layer
     processing_block_type = ConvolutionalBatchNormProcessingBlock
     dim_reduction_block_type = ConvolutionalBatchNormDimensionalityReductionBlock
+elif args.block_type == 'conv_bn_rc_block':
+    # conv_bn_rc_block is a block that contains a convolutional layer followed by a batch normalization layer
+    # and a residual connection to the input of the block
+    processing_block_type = ConvolutionalBatchNormResidualConnectionProcessingBlock
+    dim_reduction_block_type = ConvolutionalBatchNormResidualConnectionDimensionalityReductionBlock
 else:
     raise ModuleNotFoundError
 

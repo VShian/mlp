@@ -3,3 +3,10 @@ python pytorch_mlp_framework/train_evaluate_image_classification_system.py --bat
 # Total number of parameters 338500
 # Total number of conv layers 38
 # Total number of linear layers 1
+
+# train:
+#   loss: 1.7130, accuracy: 0.5000:
+# valid:
+#   loss: 1.9214, accuracy: 0.5000:
+# test:
+#   loss: 2.1614, accuracy: 0.4700
